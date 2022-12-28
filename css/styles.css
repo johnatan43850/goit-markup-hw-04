@@ -8,7 +8,9 @@
     --logo-text-color: #000000;
     --hero-background-color:#2F303A;
     --button-background: #F5F4FA;
-    --icon-text-color: ;
+    --icon-fill-color:#AFB1B8;
+    --border-gallery-color:#EEEEEE;
+    --icon-background-color:rgba(255, 255, 255, 10%);
 
 }
 
@@ -71,8 +73,8 @@ body{
 }
 
 .logo-footer{
-    display: inline-block;
-
+    display: block;
+    display: flex;
     margin-right: 0;
     margin-bottom: 20px;
 
@@ -170,7 +172,27 @@ margin-left: auto;
 .heder-contact:hover,
 .heder-contact:focus{
         color: var(--accent-text-color);
+        fill: var(--accent-text-color);
 }
+
+.meil-icon{
+        margin-right: 10px;
+        fill: var(--secondary-text-color);
+}
+.tel-icon{
+    margin-right: 10px;
+    fill: var(--secondary-text-color);    
+}
+.meil-icon:hover,
+.meil-icon:focus{
+        fill: #2196F3;
+}
+.tel-icon:hover,
+.tel-icon:focus{
+        fill: var(--accent-text-color);
+}
+
+
 
 /* section */
 
@@ -240,31 +262,8 @@ margin-left: auto;
 }
 
 /* section */
-.section-item::before{
-        margin-bottom: 30px;
-        display: block;
-        content: "";
-        height: 120px; 
-        background: var(--button-background);
-        background-position: center;
-        background-repeat: no-repeat;
-}
-.icon-antenna::before{
-        background-image: url(../images/antenna.svg);       
-}
 
-.icon-clock::before{
-        background-image: url(../images/clock\ 1.svg);
 
-}
-.icon-diagram::before{
-
-        background-image: url(../images/diagram\ 1.svg);
-}
-
-.icon-astronaut::before{
-        background-image: url(../images/astronaut\ 1.svg);
-}
 
 .section-item{
     width: 270px;
@@ -308,6 +307,17 @@ margin-left: auto;
 
         color: var(--secondary-text-color);
 }
+     
+
+.laine-icon{  
+      display: flex;
+      background:var(--button-background);
+      width: 270px;
+      padding: 25px 100px;
+}
+
+
+
 
 /* work */
 
@@ -351,8 +361,7 @@ margin-left: auto;
 
 .team-box{
     display: flex;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
+
 }
 
 /* team-contakt */
@@ -365,7 +374,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 }
 
 .link-icon{
-        display: inline-block;
+        display:inline-block;
         width: 44px;
         height: 44px;
         border-radius: 50%;
@@ -378,7 +387,14 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 
 .team-items{
        margin-right: 22px;
+
 }
+
+.team-shadow{
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+                border-radius: 0px 0px 4px 4px;
+}
+
 .team-items:last-child{
         margin-right: 0px;
 }
@@ -388,17 +404,16 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
         display: flex;
        
         padding-bottom: 31.47px;
-        
 }
        
 
 
 .icon-team {
-        fill: #AFB1B8;
+        fill: var(--icon-fill-color);
 
         width: 44px;
         height: 44px;
-       padding: 12px;
+        padding: 12px;
 
       
 }
@@ -444,6 +459,10 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 .customers-title{
         margin-bottom: 50px;
         text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        letter-spacing: 0.03em;
 }
 
 .customers{
@@ -455,14 +474,17 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 }
 
 .customers-items{
-        border: 1px solid #AFB1B8;
+        border: 1px solid var(--icon-fill-color);
         border-radius: 4px;
         padding: 16px 32px;
         width: 170px;
+        height: 92px;
 }
 .icon-footer{
-        fill: #AFB1B8
+        fill: var(--icon-fill-color);
+        
 }
+
 
 .customers-items:hover,:focus{
         border: 1px solid var(--accent-text-color);
@@ -471,6 +493,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 .icon-footer:hover,:focus{
         fill: var(--accent-text-color);
 }
+
 
 /* footer */
 
@@ -539,20 +562,42 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 10%);
+        background: var(--icon-background-color);
 
 }
 
 .title-icon {
+        display: block;
         margin-bottom: 20px;
 }
 
-.icon-list {
-        display: flex;
+
+.title-icon{
+        font-weight: 700;
+        font-size: 14px;
+        line-height:1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+}
 
 
+
+.address-box{
+       
+        display: flex;  
+        
 
 }
+
+
+
+.list-box{
+        margin-left: 70px;
+         
+        
+}
+
+
 
 
             /* portfolio */
@@ -569,6 +614,9 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
     margin-right: 30px;
     margin-bottom: 30px;
 }
+.gallery-item:hover{
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .gallery-item:nth-child(3n){
     margin-right: 0;
@@ -579,9 +627,9 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 }
 
 .gallery-box{
-    border-left: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid var(--border-gallery-color);
+    border-right: 1px solid var(--border-gallery-color);
+    border-bottom: 1px solid var(--border-gallery-color);
     padding: 20px 24px;
 }
  
@@ -610,11 +658,13 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 
 .button:hover,:focus{
         color: var(--accent-text-color);
-    
+        
 }
 
 
+
 .button-secondary{
+        cursor: pointer;
         margin: 0;
         border: 0;
         padding: 6px 22px;
@@ -630,9 +680,12 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0p
 .button-secondary:hover{
         color: var(--white-text-color);
         background-color: var(--accent-text-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-secondary:focus{
         color: var(--accent-text-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 .conteiner{
