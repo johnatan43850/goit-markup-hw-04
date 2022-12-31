@@ -123,7 +123,6 @@ body{
 }
 
 .link-header{
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -131,6 +130,7 @@ body{
 .link:hover,
 .link:focus{
         color: var(--accent-text-color);
+       
 }
 /*heder*/
 .header{
@@ -146,15 +146,17 @@ body{
     
 margin-left: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .contakt-item:not(:last-child){
     margin-right: 50px;
 }
 
+
 .heder-contact{
-    
-       
+
         font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
@@ -171,25 +173,26 @@ margin-left: auto;
 
 .heder-contact:hover,
 .heder-contact:focus{
-        color: var(--accent-text-color);
+        
         fill: var(--accent-text-color);
 }
 
 .meil-icon{
+       
+        display: inline-block;
         margin-right: 10px;
         fill: var(--secondary-text-color);
 }
-.tel-icon{
-    margin-right: 10px;
-    fill: var(--secondary-text-color);    
-}
+
 .meil-icon:hover,
 .meil-icon:focus{
-        fill: #2196F3;
-}
-.tel-icon:hover,
-.tel-icon:focus{
         fill: var(--accent-text-color);
+}
+
+.tel-icon{
+    margin-right: 10px;
+    fill: var(--secondary-text-color);  
+    color: var(--accent-text-color);  
 }
 
 
@@ -474,11 +477,10 @@ margin-left: auto;
 }
 
 .customers-items{
+        width: 170px;
         border: 1px solid var(--icon-fill-color);
         border-radius: 4px;
-        padding: 16px 32px;
-        width: 170px;
-        height: 92px;
+        
 }
 .icon-footer{
         fill: var(--icon-fill-color);
@@ -492,6 +494,15 @@ margin-left: auto;
 
 .icon-footer:hover,:focus{
         fill: var(--accent-text-color);
+}
+.customers-link{
+    display: block;
+padding: 16px 32px;
+        width: 170px;
+       height: 90px;
+}
+.customers-link:hover{
+        color: var(--accent-text-color);
 }
 
 
