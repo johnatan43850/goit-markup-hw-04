@@ -384,9 +384,13 @@ margin-left: auto;
         
       
 }
-.link-icon:hover,:focus{
+.link-icon:hover{
         background: var(--accent-text-color);
         color: var(--white-text-color);
+}
+
+.link-icon:focus{
+        color: var(--white-text-color);  
 }
 
 .icon-team {
@@ -512,9 +516,7 @@ margin-left: auto;
         color: var(--accent-text-color);
 }
 
-.customers-link:hover,:focus{
-        border: 1px solid var(--accent-text-color);
-}
+
 
 
 
@@ -680,7 +682,7 @@ margin-left: auto;
         color: currentColor;
 }
 
-.gallery-link:hover,:focus{
+.gallery-link:hover{
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
